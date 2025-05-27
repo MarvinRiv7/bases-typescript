@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bases de TypeScript</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bases de TypeScript</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #007acc, #00c6ff);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #fff;
+      color: #007acc;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
-    <script src="tipos/null-undefined.js"></script>
+  <h1>Bases de TypeScript</h1>
+  <p>Explora cómo TypeScript puede ayudarte a escribir código más seguro y robusto. Haz clic en el botón para ejecutar funciones desde tu archivo JavaScript.</p>
+  <button class="btn" onclick="startExample()">Ejecutar ejemplo</button>
+
+  <script src="funcione/args-default.js"></script>
+  <script>
+    function startExample() {
+      if (typeof exampleFunction === 'function') {
+        exampleFunction();
+      } else {
+        alert('La función no está disponible. Revisa el archivo args-required.js.');
+      }
+    }
+  </script>
 </body>
 </html>
